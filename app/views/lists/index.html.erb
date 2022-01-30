@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Lists</h1>
+<%= turbo_stream_from "lists" %>
 
 <div class="card mb-3">
   <div class="card-body">
@@ -13,11 +14,8 @@
   </div>
 </div>
 
-<%= turbo_stream_from "lists" %>
-  <%= turbo_frame_tag "lists" do %>
+<%= turbo_frame_tag "lists" do %>
   <div data-controller="lists-position">
     <%= render @lists %>
   </div>
 <% end %>
-
-<%= link_to "New list", new_list_path %>

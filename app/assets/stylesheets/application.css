@@ -14,3 +14,8 @@
  *= require_self
  *= require rails_bootstrap_forms
  */
+
+
+ #lists turbo-frame{
+   display: block;
+ }
