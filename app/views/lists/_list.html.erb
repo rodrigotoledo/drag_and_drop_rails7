@@ -1,7 +1,6 @@
-<div id="<%= dom_id list %>">
-  <p>
-    <strong>Name:</strong>
-    <%= list.name %>
-  </p>
-
-</div>
+<%= content_tag :div, id: dom_id(list), data: { sgid: list.to_sgid_param }, class: "border border-1 mb-2 p-3" do %>
+  <div class="btn-group" role="group" aria-label="Actions">
+    <%= link_to "Edit", edit_list_path(list), class: 'btn btn-primary' %>
+    <%= link_to "Show", list, class: 'btn btn-secondary' %>
+  </div> <%= list.name %>
+<% end %>

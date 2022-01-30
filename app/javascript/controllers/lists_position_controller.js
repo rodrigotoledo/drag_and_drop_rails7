@@ -17,6 +17,7 @@ export default class extends Controller {
       })
     })
     if (response.ok) {
+      // console.log(document.querySelector('[data-controller="lists-position"]'))
       console.log(event.item.dataset.sgid)
     }
   }

@@ -2,12 +2,22 @@
 
 <h1>Lists</h1>
 
-<ul data-controller="lists-position" class="list-group mb-3">
-  <% @lists.each do |list| %>
-    <%= content_tag :li, data: { sgid: list.to_sgid_param }, class: "list-group-item" do %>
-      <%= list.name %> - <%= link_to "Show this list", list %>
-    <% end %>
-  <% end %>
-</ul>
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Saving List</h5>
+    <div class="card-text">
+      <%= turbo_frame_tag "list_form" do %>
+        <%= render "form", list: @list || List.new %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= turbo_stream_from "lists" %>
+  <%= turbo_frame_tag "lists" do %>
+  <div data-controller="lists-position">
+    <%= render @lists %>
+  </div>
+<% end %>
 
 <%= link_to "New list", new_list_path %>

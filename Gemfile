@@ -71,3 +71,5 @@ end
 gem "acts_as_list", "~> 1.0"
 
 gem "faker", "~> 2.19"
+
+gem "bootstrap_form", "~> 5.0"
