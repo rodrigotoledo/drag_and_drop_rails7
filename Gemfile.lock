@@ -71,6 +71,9 @@ GEM
     bindex (0.8.1)
     bootsnap (1.10.2)
       msgpack (~> 1.2)
+    bootstrap_form (5.0.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     builder (3.2.4)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
@@ -197,6 +200,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_list (~> 1.0)
   bootsnap
+  bootstrap_form (~> 5.0)
   debug
   faker (~> 2.19)
   importmap-rails
